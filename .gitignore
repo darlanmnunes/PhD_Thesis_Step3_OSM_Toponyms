@@ -169,6 +169,8 @@ cython_debug/
 
 # security reasons:
 token
+mapillary_token
+gsv_token
 
 # macOS stuff:
 .DS_Store
@@ -186,3 +188,6 @@ deprecated
 
 # PyPI configuration file
 .pypirc
+
+# sample stuff:
+sli_roi
