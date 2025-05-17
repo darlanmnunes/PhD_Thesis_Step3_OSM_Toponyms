@@ -167,6 +167,20 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+# security reasons:
+token
+
+# macOS stuff:
+.DS_Store
+
+# Unecessary QGIS files that can be removed:
+.qml
+
+# sample stuff:
+cache
+temp_imgs
+deprecated
+
 # Ruff stuff:
 .ruff_cache/
 
