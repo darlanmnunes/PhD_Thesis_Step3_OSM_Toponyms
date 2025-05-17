@@ -182,9 +182,10 @@ gsv_token
 cache
 temp_imgs
 deprecated
-results/1-output_grid/partial_results/resultado_consolidado1.geojson
-results/1-output_grid/partial_results/resultado_consolidado2.geojson
-results/1-output_grid/time_metrics/time_log_OHSOME_requests.xlsx
+results/1_output_grid/partial_results/resultado_consolidado_step1.geojson
+results/1_output_grid/partial_results/resultado_consolidado1.geojson
+results/1_output_grid/partial_results/resultado_consolidado2.geojson
+results/1_output_grid/time_metrics/time_log_OHSOME_requests.xlsx
 
 # Ruff stuff:
 .ruff_cache/
