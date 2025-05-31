@@ -175,6 +175,9 @@ gsv_token
 # macOS stuff:
 .DS_Store
 
+# VSCode stuff:
+.vscode
+
 # Unecessary QGIS files that can be removed:
 .qml
 
