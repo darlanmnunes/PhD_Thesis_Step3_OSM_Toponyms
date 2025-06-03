@@ -186,6 +186,7 @@ cache
 temp_imgs
 deprecated
 results/1_output_grid
+data/output_code1
 
 # Ruff stuff:
 .ruff_cache/
