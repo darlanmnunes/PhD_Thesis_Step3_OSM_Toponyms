@@ -171,6 +171,7 @@ cython_debug/
 token
 mapillary_token
 gsv_token
+configs
 
 # macOS stuff:
 .DS_Store
