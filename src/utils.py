@@ -7,65 +7,41 @@
 5 - Consolidar arquivos GeoJSON em um só (consolidar_geojson).
 """
 
-import time
-import json
-import csv
+# utils.py (atualizado)
+import time, json, csv, threading
 from datetime import datetime
 from copy import deepcopy
-
-# Logging
+import glob
 
 def init_log(log_path):
     if not log_path.exists():
         with open(log_path, 'w', newline='') as f:
-            writer = csv.writer(f)
-            writer.writerow(["lote", "mensagem", "timestamp"])
+            csv.writer(f).writerow(["lote", "mensagem", "timestamp"])
 
 def log_mensagem(log_path, lote, mensagem):
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     with open(log_path, 'a', newline='') as f:
-        writer = csv.writer(f)
-        writer.writerow([lote, mensagem, timestamp])
+        csv.writer(f).writerow([lote, mensagem, timestamp])
 
-# Keep-alive para Colab
-
-def start_keep_alive(log_path):
+def start_keep_alive(log_path, keep_alive_flag):
     import threading
     def keep_alive():
-        while True:
+        while keep_alive_flag["running"]:
             time.sleep(300)
             print("Ainda trabalhando...")
             log_mensagem(log_path, "keep_alive", "Ainda trabalhando...")
-    threading.Thread(target=keep_alive, daemon=True).start()
-
-# Retry wrapper para chamadas de rede
-
-def retry_api_call(func, max_retries=3, backoff_base=2):
-    for attempt in range(max_retries):
-        result = func()
-        if result[0] is not None:
-            return result
-        time.sleep(backoff_base ** attempt)
-    return None, result[1]  # Retorna o erro da última tentativa
-
-# Cópia segura de features
-
-def copiar_feature(feature):
-    return deepcopy(feature)
-
-# Consolida arquivos geojson em um só
+    thread = threading.Thread(target=keep_alive, daemon=True)
+    thread.start()
+    return thread
 
 def consolidar_geojson(pasta_saida, padrao_arquivo, nome_saida):
-    import glob
     arquivos = sorted(glob.glob(str(pasta_saida / padrao_arquivo)))
     todas_features = []
     for arquivo in arquivos:
         with open(arquivo, 'r', encoding='utf-8') as f:
             fc_parcial = json.load(f)
             todas_features.extend(fc_parcial['features'])
-
     final_fc = {"type": "FeatureCollection", "features": todas_features}
     with open(pasta_saida / nome_saida, 'w', encoding='utf-8') as f:
         json.dump(final_fc, f)
-
     return len(todas_features)
