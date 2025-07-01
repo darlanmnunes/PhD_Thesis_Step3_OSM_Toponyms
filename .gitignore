@@ -186,8 +186,10 @@ configs
 cache
 temp_imgs
 deprecated
+data/output_tests
 results/1_output_grid
-data/output_code1
+results/2_toponyms_retrieval
+results/3_mapillary_coverage
 
 # Ruff stuff:
 .ruff_cache/
