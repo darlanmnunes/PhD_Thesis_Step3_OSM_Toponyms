@@ -49,10 +49,10 @@ def processar_com_ohsome(cell_row, classe_et_edgv_to_tags, log_mensagem, log_pat
             }
 
             try:
-                print(f"[DEBUG] Célula: {id_celula}, Classe: {classe}, Tag={tag}, Value={value}")
-                print(f"[DEBUG] Payload: {json.dumps(payload)}")
+                #print(f"[DEBUG] Célula: {id_celula}, Classe: {classe}, Tag={tag}, Value={value}")
+                #print(f"[DEBUG] Payload: {json.dumps(payload)}")
                 response = requests.post(url_ohsome_latest, data=payload)
-                print(f"[DEBUG] Status Code: {response.status_code}")
+                #print(f"[DEBUG] Status Code: {response.status_code}")
                 response.raise_for_status()
 
                 dados = response.json()
