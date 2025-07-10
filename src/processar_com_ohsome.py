@@ -36,13 +36,16 @@ def processar_com_ohsome(cell_row, classe_et_edgv_to_tags, log_mensagem, log_pat
             log_mensagem(log_path, id_celula, f"[ERRO] Conversão de data inflexão inválida: {data_inicio_str} - {e}")
             continue
 
-        data_fim = pd.Timestamp("2025-04-06T13:00Z").strftime("%Y-%m-%d")
         data_inicio_str = data_inicio.strftime("%Y-%m-%d")
+
+        data_inicio_oshome = pd.Timestamp("2007-10-08T00:00:00Z").strftime("%Y-%m-%d")
+        data_fim = pd.Timestamp("2025-04-06T13:00Z").strftime("%Y-%m-%d")
+        
 
         for tag, value in tags:
             payload = {
                 "bboxes": f"{bbox[0]},{bbox[1]},{bbox[2]},{bbox[3]}",
-                "time": f"{data_inicio_str},{data_fim}",
+                "time": f"{data_inicio_oshome},{data_fim}",
                 "filter": f"{tag}={value} and name=*",
                 "properties": "metadata,tags",
                 "clipGeometry": "false"
