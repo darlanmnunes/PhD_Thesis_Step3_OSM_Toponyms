@@ -186,7 +186,7 @@ configs
 cache
 temp_imgs
 deprecated
-data/output_tests
+results/0_tests_output
 results/1_output_grid
 results/2_toponyms_retrieval
 results/3_mapillary_coverage
