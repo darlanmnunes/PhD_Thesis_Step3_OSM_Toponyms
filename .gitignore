@@ -195,4 +195,5 @@ results
 .pypirc
 
 # sample stuff:
-sli_roi
+data/dataset_yolo
+yolov12
