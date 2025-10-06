@@ -334,7 +334,6 @@ def levenshtein_analysis1(df_text, gdf, text_column, study_case_column, case_col
 
 
 # Version 2 with improvements of the levenshtein_analysis function
-
 def levenshtein_analysis2(df_text, gdf, text_column, study_case_column, case_column, column_name):
     """
     Calculate the Levenshtein distance and similarity percentage for each pair of unique names in the given GeoDataFrame and text DataFrame.
