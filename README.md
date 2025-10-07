@@ -10,6 +10,13 @@ Flowchart illustrating the proposed research framework.
 ![open-source framework applying the hrybrid methodology for OSM Toponyms validation using SLI](utils/paper04_flowchart_v3.png)
 
 
+## Visualização Interativa
+
+O mapa com os POIs enriquecidos está disponível em:
+
+[BDGET interativa com Folium](https://darlanmnunes.github.io/PhD_Thesis_Step3_OSM_Toponyms/pois_enriched_map.html)
+
+
 ## Dependências
 
 As dependências estão listadas em `requirements.txt`.
