@@ -23,4 +23,5 @@ As dependências estão listadas em `requirements.txt`.
 Para instalar:
 
 ```bash
+
 pip install -r requirements.txt
