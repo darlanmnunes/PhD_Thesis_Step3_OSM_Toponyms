@@ -10,23 +10,9 @@ Flowchart illustrating the proposed research framework.
 ![open-source framework applying the hrybrid methodology for OSM Toponyms validation using SLI](utils/paper04_flowchart_v3.png)
 
 
-# Requirements
-* numpy
-* time
-* os
-* pandas
-* geopandas
-* requests
-* json
-* folium
-* shapely
-* pyproj
-* matplotlib
-* seaborn
-* mmapclassify
-* statsmodels
-* pysal
-* mgwr
-* tqdm
-* sklearn
-* ipywidgets
+## Dependências
+
+As dependências estão listadas em `requirements.txt`. Para instalar:
+
+```bash
+pip install -r requirements.txt
