@@ -1,0 +1,12 @@
+classe,pois_total,validados,val_ou_abaixo,oficial_com_nome,cand_inclusao,cand_preencher,reconciliar_nome,manter_validado,revisar_prior,precisa_enriq_total
+cbge_area_verde,67,20,30,67,0,0,11,9,47,36
+cbge_praca,251,153,184,0,10,143,0,0,17,251
+edif_comerc_serv,179,163,167,179,0,0,151,12,16,167
+edif_constr_lazer,229,122,152,229,0,0,117,5,107,223
+edif_desenv_social,34,13,24,34,0,0,13,0,21,34
+edif_ensino,513,253,333,513,0,0,153,100,260,259
+edif_metro_ferroviaria,110,66,94,110,0,0,65,1,44,109
+edif_pub_civil,44,16,36,44,0,0,16,0,28,43
+edif_saude,139,94,108,139,0,0,58,36,45,79
+edif_turistica,46,29,36,44,0,1,24,4,16,39
+laz_campo_quadra,15,8,10,15,0,0,5,3,7,9
