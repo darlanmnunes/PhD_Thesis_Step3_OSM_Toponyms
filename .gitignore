@@ -186,7 +186,19 @@ configs
 cache
 temp_imgs
 deprecated
-results
+
+# results
+results/0_tests_output
+results/1_output_grid
+results/2_toponyms_retrieval
+results/3_mapillary_coverage
+results/4_CLIP_results
+results/5_CLIP_download_img_mpl
+results/6_YOLO_KerasOCR_results
+results/7_SLI_toponyms_correspondece
+results/9_Instrisic_analysis
+results/10_hybrid_toponymic_database/v1
+
 
 # Ruff stuff:
 .ruff_cache/
