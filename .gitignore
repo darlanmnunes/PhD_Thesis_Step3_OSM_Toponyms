@@ -197,7 +197,7 @@ results/5_CLIP_download_img_mpl
 results/6_YOLO_KerasOCR_results
 results/7_SLI_toponyms_correspondece
 results/9_Instrisic_analysis
-results/10_hybrid_toponymic_database/v1
+results/10_enriched_toponymic_database/v1
 
 
 # Ruff stuff:
